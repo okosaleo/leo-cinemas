@@ -1,0 +1,27 @@
+ <div className="menu-cont z-[200] bg-[#fbfbfb] relative w-full p-10 text-[#0f0f0f] font-sans" ref={container}>
+           <div className="menu-overlay h-[115vh] bg-[#fbfbfb] absolute top-0 left-0 w-screen p-[2em] flex justify-between items-start z-[2]">
+             <div className="menu-copy  flex-col flex justify-between p-[2em]">
+              <div className="menu-links">
+                 {menuLinks.map((link, index) => (
+                   <div className="menu-link-item w-max [clip-path:polygon(0_0,_100%_0,_100%_100%,_0%_100%)]" key={index}>
+                     <div className="menu-link-item-holder relative  " onClick={toggleMenu}>
+                      <Link href={link.path} className="menu-link text-[50px] tracking-wider font-bold">{link.label}</Link>
+                     </div>
+                  </div>
+                ))}
+              </div>
+              <div className="menu-info">
+                <div className="menu-info-col text-[#0f0f0f]">
+                  <a href="#">X &#8599;</a>
+                  <a href="#">Instagram &#8599;</a>
+                  <a href="#">FaceBook &#8599;</a>
+                </div>
+                <div className="menu-info-col">
+                  <p>okosaleonel@gmail.com</p>
+                  <p>2342 232 343</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+         </div>
